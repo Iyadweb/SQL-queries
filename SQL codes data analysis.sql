@@ -1,6 +1,8 @@
 -- 2.1: Retrieve a list of all employees that are not managers
-
-
+SELECT e.emp_no, e.first_name, e.last_name
+FROM employees e 
+WHERE e.emp_no NOT IN (
+	SELECT emp_no FROM  dept_manager)
 -- 2.2: Retrieve all columns in the sales table for customers above 60 years old
 -- Exercise 2.1: Write a JOIN statement to get the result of 2.3
 SELECT e.emp_no, e.first_name, e.last_name
